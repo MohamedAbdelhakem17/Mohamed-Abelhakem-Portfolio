@@ -1,0 +1,488 @@
+/* ================================= Start  Global Rules ================================= */
+:root {
+    --main-color: #09c;
+    --secand-color: #cde1f8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #0f3460;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.main-title::after,
+.main-title::before {
+    content: "";
+    height: 100%;
+    width: 5px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    transition: all 0.5s linear;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.main-title::after {
+    background-color: #09c;
+    right: 0;
+}
+
+.main-title::before {
+    left: 0;
+    background-color: #0f3460;
+}
+
+.main-title::first-letter {
+    color: #09c;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.main-title span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    position: absolute;
+    z-index: 2221;
+    bottom: 0%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    animation: move-up 1s linear infinite;
+    -webkit-animation: move-up 1s linear infinite alternate-reverse;
+}
+
+.main-title span:first-child {
+    right: -20px;
+    border: 5px solid #09c;
+}
+
+.main-title span:last-child {
+    left: 0;
+    border: 5px solid #0f3460;
+}
+
+
+@keyframes move-up {
+    to {
+        bottom: 50%;
+    }
+}
+
+/* ================================= End  Global Rules ================================= */
+
+/* ================================= Start  Navbar ================================= */
+.navbar {
+    z-index: 22222222222;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 2rem;
+}
+
+.navbar .nav-item {
+    padding: 0 .5rem;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    position: relative;
+
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link.active::before,
+.navbar .nav-link::after,
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #09c;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+}
+
+.navbar .nav-link::before {
+    top: 0;
+    left: 0;
+}
+
+.navbar .nav-link::after {
+    bottom: 0;
+    right: 0;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link.active::before,
+.navbar .nav-link:hover::before,
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #09c;
+    font-weight: 300;
+}
+
+.navbar-toggler i {
+
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* ================================= End  Navbar ================================= */
+
+/* ================================= Start  Home ================================= */
+.home {
+    background-image: url(../img/c25f615f-c41a-4d26-a2ac-b72e2ea9f834.jpg);
+    background-position: 50% 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home p,
+.home h1 span {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #09c;
+}
+
+.home h1 span {
+    font-size: 4rem;
+}
+
+.home h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0f3460;
+    padding: 1.2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 .5rem;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.icon a {
+    color: #1867c9;
+    font-size: 1.2rem;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.icon:hover a {
+    color: white;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+
+.icon:hover {
+    background-color: #0f3460;
+    border-color: white;
+}
+
+@media screen and (max-width:499px) {
+    html {
+        font-size: 12px;
+    }
+
+    .main-title span:first-child {
+        right: -17px;
+    }
+}
+
+/* ================================= End  Home ================================= */
+
+/* ================================= Start  about ================================= */
+.about .inner {
+    box-shadow: -7px -10px 0px #09c, 10px 7px 0px #0f3460;
+}
+
+.about .about-info h5 {
+    color: #09c;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 1.2rem 0 0;
+}
+
+.about .about-info h5 span {
+    color: #0f3460;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.about .about-info h5 a {
+    margin-bottom: 1rem;
+    color: #09c;
+    transition: all.5s linear;
+    -webkit-transition: all.5s linear;
+    -moz-transition: all.5s linear;
+    -ms-transition: all.5s linear;
+    -o-transition: all.5s linear;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.about .about-info h5 a:hover {
+    color: #0f3460;
+
+}
+
+.about .about-info .skill h3 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #09c;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.about .about-info .skill h3::first-letter {
+    color: #0f3460;
+    font-style: italic;
+}
+
+.about .about-info .skill .bar {
+    margin-bottom: 1.5rem;
+    padding: .5rem 0;
+}
+
+.about .about-info .skill h6 {
+    color: #0f3460;
+    font-size: .7rem;
+    font-weight: 900;
+    border: 1px solid #09c;
+    padding: 0.1rem;
+    border-radius: 4px;
+}
+
+
+/* ================================= End  about ================================= */
+
+/* ================================= End  services ================================= */
+.card-s {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 250px;
+    background-color: rgba(0, 153, 204, 0.096);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.card-s::after,
+.card-s::before {
+    content: "";
+    height: 0%;
+    width: 5px;
+    position: absolute;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+}
+
+.card-s::after {
+    top: 0%;
+    left: 0%;
+    background-color: #09c;
+}
+
+.card-s::before {
+    bottom: 0%;
+    right: 0%;
+    background-color: #0f3460;
+}
+
+.card-s:hover:after,
+.card-s:hover:before {
+    height: 100%;
+}
+
+.card-s i {
+    font-size: 3.5rem;
+    color: #09c;
+    padding: 1rem 0;
+}
+
+.card-s h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-s p {
+    line-height: 1.8;
+    font-style: italic;
+    font-weight: 300;
+    padding: 1rem 0;
+}
+
+/* ================================= End  services ================================= */
+
+/* ================================= Start  portfolio ================================= */
+.portfolio .inner {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-right: 5px solid #0f3460;
+    border-left: 5px solid #0f3460;
+}
+
+.portfolio .inner div img {
+    width: 100%;
+    position: absolute;
+    transition: all 2s linear;
+    top: 0;
+    left: 0;
+}
+
+.portfolio .inner:hover img {
+    top: -150%;
+}
+
+.portfolio .inner .text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(#0f336056, #0f33609a, #0f3460);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 100%;
+    transition: all .5s linear;
+    padding: 0.5rem;
+}
+
+.portfolio .inner:hover .text {
+    top: 0;
+}
+
+.portfolio .inner .text h3 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+.portfolio .inner .text p {
+    line-height: 1.8;
+    text-align: center;
+}
+
+.portfolio .inner .text a {
+    color: white;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.portfolio .inner .text a:hover {
+    background-color: white;
+    color: #0f3460;
+    border-color: #0f3460;
+}
+
+.portfolio .inner .text a i {
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+/* ================================= End  portfolio ================================= */
+
+footer h2 {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+footer h2 a {
+    font-size: 2.2rem;
+    font-style: italic;
+    font-weight: 100;
+}
